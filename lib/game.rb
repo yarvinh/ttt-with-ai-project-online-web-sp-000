@@ -73,6 +73,7 @@ class Game
         turn
         winner
         won?
+      p  board.cells
       end
        if winner == "O"
          puts "Congratulations O!"

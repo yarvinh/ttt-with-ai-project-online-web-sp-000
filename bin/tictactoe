@@ -1,3 +1,16 @@
 #!/usr/bin/env ruby
-
-require_relative '../config/environment'
+ require_relative '../config/environment'
+ "welcome"
+ p "To play with 2 players press 1"
+ p "To play with the computer enter 2"
+ inputs = gets
+  input = inputs.to_i
+ if input == 1
+ human_player = Players::Human.new("X")
+ game = Game.new
+ game.play
+ elsif input == 2
+ computer_player = Players::Computer.new("X")
+ game = Game.new(computer_player)
+ game.play
+ end
