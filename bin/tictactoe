@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
  require_relative '../config/environment'
  input = 0
- until input == 3
+ until input == 4
  puts "welcome to Tic-tac-toe"
  puts "To play 0 players"
  puts "To play with 1 player enter 1"
@@ -22,8 +22,9 @@
  computer_player_2 = Players::Computer.new("O")
  game = Game.new(computer_player,computer_player_2)
  game.play
-
  end
- puts "Do you want to play again"
- puts "Press 3 to exit"
+ inputs = gets
+ input = inputs.to_i
+ puts "Do you want to play again, press 3"
+ puts "Press 4 to exit"
  end
