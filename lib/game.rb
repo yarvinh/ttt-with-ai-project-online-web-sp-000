@@ -34,20 +34,12 @@ class Game
 
  def over?
     won? != false || draw?
-  #    true
-  #  else false
-  #  end
  end
 
  def winner
    if won? != false
    board.cells[won?[0]]
    end
-  #  if won? == false
-  #    nil
-  #  else
-  #    board.cells[won?[0]]
-  #  end
  end
 
  def turn
