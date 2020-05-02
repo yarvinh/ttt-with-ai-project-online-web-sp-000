@@ -14,12 +14,6 @@ class Board
 
   def reset!
     @cells = [" ", " "," "," ", " ", " ", " "," "," "]
-      # counter = 1
-      # while cells.length < 9
-      #     cells << " "
-      #     cells.each{|a| a.replace(" ")}
-      #     counter += 1
-      # end
   end
 
   def position(position)
@@ -38,16 +32,10 @@ class Board
 
   def taken?(index)
     position(index) == "X" || position(index) == "O"
-  #    true
-  #  else false
-  #  end
   end
 
   def valid_move?(index)
      position(index) == " "
-    #   true
-    #  else false
-    # end
   end
   def update(position, player)
     index = position.to_i - 1
