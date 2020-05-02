@@ -30,10 +30,6 @@ class Game
 
  def draw?
     board.turn_count == 9 && won? == false
-  #    true
-  #  else
-  #    false
-  #  end
  end
 
  def over?
