@@ -21,33 +21,24 @@ class Game
         won_x.select{|e| e.length == 3}[0]
      elsif won_o.select{|e| e.length == 3}[0]
         won_o.select{|e| e.length == 3}[0]
-       elsif board.cells.select{|letter| letter == "X" || letter == "O"}.length == 9
-          false
+      #  elsif board.cells.select{|letter| letter == "X" || letter == "O"}.length == 9
+      #     false
      else
-        false
+         false
      end
  end
 
  def draw?
-   if board.turn_count == 9 && won? == false
-     true
-   else
-     false
-   end
+    board.turn_count == 9 && won? == false
  end
 
  def over?
-   if won? != false || draw?
-     true
-   else false
-   end
+    won? != false || draw?
  end
 
  def winner
-   if won? == false
-     nil
-   else
-     board.cells[won?[0]]
+   if won? != false
+   board.cells[won?[0]]
    end
  end
 
