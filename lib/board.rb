@@ -13,12 +13,13 @@ class Board
   end
 
   def reset!
-      counter = 1
-      while cells.length < 9
-          cells << " "
-          cells.each{|a| a.replace(" ")}
-          counter += 1
-      end
+    @cells = [" ", " "," "," ", " ", " ", " "," "," "]
+      # counter = 1
+      # while cells.length < 9
+      #     cells << " "
+      #     cells.each{|a| a.replace(" ")}
+      #     counter += 1
+      # end
   end
 
   def position(position)
@@ -36,17 +37,17 @@ class Board
   end
 
   def taken?(index)
-   if position(index) == "X" || position(index) == "O"
-     true
-   else false
-   end
+    position(index) == "X" || position(index) == "O"
+  #    true
+  #  else false
+  #  end
   end
 
   def valid_move?(index)
-    if position(index) == " "
-      true
-     else false
-    end
+     position(index) == " "
+    #   true
+    #  else false
+    # end
   end
   def update(position, player)
     index = position.to_i - 1
